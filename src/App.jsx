@@ -22,20 +22,20 @@ setDetails("");
 
   }
   return (
-    <div className='h-screen bg-black lg:flex  text-white '>
-      <form onSubmit={ (e) => {submithandler(e)}} className='flex p-10 lg:w-1/2 items-start  flex-col gap-4 '>
+    <div className='min-h-screen bg-black lg:flex  text-white '>
+      <form onSubmit={ (e) => {submithandler(e)}} className='flex p-6 lg:p-10 lg:w-1/2 items-start  flex-col gap-4 lg:h-screen lg:overflow-y-auto '>
         <h1 className='text-3xl font-bold '>Add Notes</h1>
      
       
        { /* pahla input for heading */}
 
-          <input value={title} onChange={(e)=>{ setTitle(e.target.value) }} className='px-5 outline-none font-medium w-full py-2 border-2 rounded  ' type="text" placeholder=' Enter Notes heading  '/>
+          <input value={title} onChange={(e)=>{ setTitle(e.target.value) }} className='px-5 outline-none font-medium w-full py-2 border-2 rounded   ' type="text" placeholder=' Enter Notes heading  '/>
      
        { /* DETAILED INPUT */}
           
         <textarea value={details}  onChange={(e)=>{
           setDetails(e.target.value)
-        }} className='px-2  font-medium  w-full h-30 rounded border-2 ' type="text" placeholder='Write Details' />
+        }} className='px-2  font-medium  w-full h-32 py-2 rounded border-2 '  placeholder='Write Details' />
        
         <button className='px-5 w-full py-2 bg-white rounded text-black active:scale-95 '>Add Notes</button>
    
